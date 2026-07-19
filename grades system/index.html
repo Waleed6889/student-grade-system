@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script>
+        function Percent_system() {
+            student = document.getElementById("stid").value
+            roll = +document.getElementById("rollnumid").value
+            if (student.toLowerCase() == "ahmad" && roll == 100) {
+                math = 85;
+                science = 90;
+                english = 97;
+                Total = math + science + english;
+                Percent = Total / 3;
+                document.getElementById("output").innerHTML =
+                    "Maths : " + math + "<br>" +
+                    "Science : " + science + "<br>" +
+                    "English : " + english + "<br>" + "<br>" + "Total Marks : " + Total + " Marks " + "<br>" + "<br>" + "Percent : " + Percent + " %";
+        }
+        else  if (student.toLowerCase() == "ali" && roll == 101) {
+                math = 65;
+                science = 99;
+                english = 30;
+                Total = math + science + english;
+                Percent = Total / 3;
+                document.getElementById("output").innerHTML =
+                    "Maths : " + math + "<br>" +
+                    "Science : " + science + "<br>" +
+                    "English : " + english + "<br>" + "<br>" + "Total Marks : " + Total + " Marks " + "<br>" + "<br>" + "Percent : " + Percent + " %";
+        }
+         else  if (student.toLowerCase() == "waleed" && roll == 102) {
+                math = 100;
+                science = 100;
+                english = 100;
+                Total = math + science + english;
+                Percent = Total / 3;
+                document.getElementById("output").innerHTML =
+                    "Maths : " + math + "<br>" +
+                    "Science : " + science + "<br>" +
+                    "English : " + english + "<br>" + "<br>" + "Total Marks : " + Total + " Marks " + "<br>" + "<br>" + "Percent : " + Percent + " %";
+        }
+        else{
+            document.getElementById("output").innerHTML="!Invalid Student Name Or Roll Number!";
+        }
+    }
+            
+
+    </script>
+    <form>
+        <label for="stname">Enter Student Name</label>
+        <input type="text" placeholder="Enter Student Name" id="stid">
+        <br>
+        <br>
+        <label for="rollnum">Enter Roll Number </label>
+        <input type="number" placeholder="Enter Your Roll Number" id="rollnumid">
+        <button type="button" onClick=" Percent_system()">Get Your Result</button>
+        <h3 id="output"></h3>
+        
+    </form>
+</body>
+
+</html>
